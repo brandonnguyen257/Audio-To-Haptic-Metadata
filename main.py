@@ -1,4 +1,4 @@
-from utils import generateTimeStampsArray
+from haptic_utils import generateTimeStampsArray
 
 
 timeStampArray = generateTimeStampsArray(2, 10)

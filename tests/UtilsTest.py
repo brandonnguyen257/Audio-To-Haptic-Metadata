@@ -1,8 +1,9 @@
 import pytest
 import sys
-sys.path.append('..')
-from utils import generateTimeStampsArray
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
+from haptic_utils import *
 TOLERACE = 0.000001
 
 def test_generateTimeStampsArray():
