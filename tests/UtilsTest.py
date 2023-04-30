@@ -1,7 +1,7 @@
 import pytest
 import sys
 sys.path.append('..')
-from Utils import generateTimeStampsArray
+from utils import generateTimeStampsArray
 
 TOLERACE = 0.000001
 
