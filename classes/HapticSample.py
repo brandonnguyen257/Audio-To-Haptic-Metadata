@@ -40,3 +40,6 @@ class HapticSample:
 
     def __hash__(self):
         return hash((self.time_stamp, self.haptic_value))
+    
+    def __dict__(self):
+        return {'time_stamp': self.time_stamp, 'haptic_value': self.haptic_value}

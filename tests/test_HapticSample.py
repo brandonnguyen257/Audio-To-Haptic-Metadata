@@ -92,3 +92,8 @@ def test_hash_error_non_HapticSample_object():
     hapticSample1 = HapticSample(1.0, 0.3)
     hapticSample2 = 1.0
     assert hash(hapticSample1) != hash(hapticSample2)
+
+def test_haptic_sample_dict():
+    sample = HapticSample(0.5, 0.7)
+    expected_dict = {'time_stamp': 0.5, 'haptic_value': 0.7}
+    assert sample.__dict__() == expected_dict

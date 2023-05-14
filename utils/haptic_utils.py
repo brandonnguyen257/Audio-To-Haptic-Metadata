@@ -15,10 +15,9 @@ from classes.HapticSample import HapticSample
 '''
 def get_audio_and_audio_samplerate(file_location: str, save_plot: bool=False):
     start_time = time.time()
-    print(f"Generating Audio Time Series for {file_location}...")
+    # print(f"Generating Audio Time Series for {file_location}...")
     audio , audio_sr = librosa.load(file_location)
     end_time = time.time()
-    print(f"Audio Time Series Generated in {end_time - start_time} seconds")
     if save_plot:
         plt.figure(figsize=(30, 10))
         librosa.display.waveshow(audio, sr=audio_sr)
