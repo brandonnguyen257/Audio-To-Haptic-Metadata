@@ -5,9 +5,9 @@ import time
 
 start_time = time.time()
 
-sample_rate, file_name = get_sample_rate_and_file_name()
+input_sr, file_name = get_sample_rate_and_file_name()
 
-audio_time_series, audio_samplerate = get_audio_time_series_and_audio_samplerate(file_name, save_plot=True)
+audio_time_series, audio_time_series_sr = get_audio_time_series_and_audio_samplerate(file_name, save_plot=True)
 
 
 end_time = time.time()

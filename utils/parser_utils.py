@@ -11,8 +11,8 @@ def audio_file_type(file_path):
 def get_sample_rate_and_file_name():
     # Parse arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("sampleRate", type=int)
-    parser.add_argument("fileName", type=audio_file_type)
+    parser.add_argument("input_sr", type=int)
+    parser.add_argument("file_name", type=audio_file_type)
     args = parser.parse_args()
-    sample_rate, file_name = args.sampleRate, args.fileName
+    sample_rate, file_name = args.input_sr, args.file_name
     return sample_rate, file_name
