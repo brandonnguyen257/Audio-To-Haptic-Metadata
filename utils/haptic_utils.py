@@ -14,10 +14,8 @@ from classes.HapticSample import HapticSample
     https://librosa.org/doc/latest/generated/librosa.load.html
 '''
 def get_audio_and_audio_samplerate(file_location: str, save_plot: bool=False):
-    start_time = time.time()
-    # print(f"Generating Audio Time Series for {file_location}...")
+    print(f"Generating Audio Time Series for {file_location}...")
     audio , audio_sr = librosa.load(file_location)
-    end_time = time.time()
     if save_plot:
         plt.figure(figsize=(30, 10))
         librosa.display.waveshow(audio, sr=audio_sr)
@@ -72,7 +70,7 @@ def get_haptic_samples(audio, audio_sr, time_stamps):
     return haptic_samples
 
 '''
-Grabs the corresponding indicies for the time stamps
+Grabs the corresponding indices for the time stamps
 '''
 def get_time_stamp_indicies(time_stamps, audio_sr):
     return [int(time_stamp * audio_sr) for time_stamp in time_stamps]
