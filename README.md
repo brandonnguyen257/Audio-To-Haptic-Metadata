@@ -12,21 +12,27 @@ This script creates a
 Set Up Steps
 
 1. Activate venv by running this command in the terminal
+
 source ./venv/bin/activate
 
 2. Install necessary packages in the venv by running this command
+
 pip install -r requirements.txt
 
 3. Generate haptic metadata by running the this command
+
 python main.py {sampleRate} {audioFile}
 
 Examples with .mp3 files provided
+
 ex: python main.py 30 delilah-FredAgain.mp3
 
 ex: python main.py 30 sunSala.mp3
 
 If you want to use your own audiofiles, add your own file in the same directory as the above .mp3 files
 
-4. .png file of the audio frequency and .json file of the haptic metadata will be outputted in this format
+4. png file of the audio frequency and .json file of the haptic metadata will be outputted in this format
+
 {audioFile}_audio.png
+
 {audioFile}output.json
